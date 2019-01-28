@@ -1,7 +1,6 @@
-
 {
   "name": "react-native-chart-jackie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,8 +14,7 @@
     "url": "https://github.com/JackieDing/Chart.git"
   },
   "author": {
-    "name":"JackieDing",
-    "name":"xlye"
+    "name": "xlye"
   },
   "license": "MIT",
   "peerDependencies": {
