@@ -1,6 +1,6 @@
 
 {
-  "name": "react-native-chart",
+  "name": "react-native-chart-jackie",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,15 @@
   "keywords": [
     "react-native"
   ],
-  "author": "JackieDing xlye",
-  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackieDing/Chart.git"
+  },
+  "author": {
+    "name":"JackieDing",
+    "name":"xlye"
+  },
+  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2"
   }
