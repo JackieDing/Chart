@@ -1,13 +1,13 @@
 
-# react-native-chart
+# react-native-chart-jackie
 
 ## Getting started
 
-`$ npm install react-native-chart --save`
+`$ npm install react-native-chart-jackie-jackie --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-chart`
+`$ react-native link react-native-chart-jackie`
 
 ### Manual installation
 
@@ -15,7 +15,7 @@
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-chart` and add `RNChart.xcodeproj`
+2. Go to `node_modules` ➜ `react-native-chart-jackie` and add `RNChart.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNChart.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -26,18 +26,18 @@
   - Add `new RNChartPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-chart'
-  	project(':react-native-chart').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-chart/android')
+  	include ':react-native-chart-jackie'
+  	project(':react-native-chart-jackie').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-chart-jackie/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-chart')
+      compile project(':react-native-chart-jackie')
   	```
 
 
 ## Usage
 ```javascript
-import RNChart from 'react-native-chart';
+import RNChart from 'react-native-chart-jackie';
 
 // TODO: What to do with the module?
 RNChart;
