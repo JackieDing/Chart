@@ -65,23 +65,6 @@ export default class CommonComponent extends Component  {
                             </View>);
                         break;
                     case "percent": //利率的格式
-                        if (checktype.special) {
-                            switch(checktype.specialItem.checkType.type) {
-                                case "meiju":
-                                    return (<View
-                                        style={[
-                                            styles.rightCell,
-                                            {
-                                                width: width,
-                                                height: heightArr[comIndex]
-                                            }
-                                        ]}>
-                                        <Text>{`${tools[checktype.specialItem.checkType.mjName](sourceData[checktype.specialItem.name])}`}</Text>
-                                        <Text>{`${FormatTool.renderPercent(sourceData[dataName], checktype.rateNum)}`}</Text>
-                                    </View>);
-                                    break;
-                            }
-                        }
                         return (<View
                             style={[
                                 styles.rightCell,
@@ -117,7 +100,7 @@ export default class CommonComponent extends Component  {
                             <Text>{FormatTool.renderDate(sourceData[dataName])}</Text>
                         </View>);
                         break;
-                    case "meiju": //枚举获取的格式
+                    case "enum": //枚举获取的格式
                         return (<View
                             style={[
                                 styles.rightCell,
@@ -126,7 +109,7 @@ export default class CommonComponent extends Component  {
                                     height: heightArr[comIndex]
                                 }
                             ]}>
-                            <Text>{tools[checktype.mjName](sourceData[dataName])}</Text>
+                            <Text>{tools[checktype.enumName](sourceData[dataName])}</Text>
                         </View>);
                         break;
                     case "extra":

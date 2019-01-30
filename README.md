@@ -3,7 +3,7 @@
 
 ## Getting started
 
-`$ npm install react-native-chart-jackie-jackie --save`
+`$ npm install react-native-chart-jackie --save`
 
 ### Mostly automatic installation
 

@@ -1,7 +1,7 @@
 
 import { NativeModules } from 'react-native';
-import FHComponent from './DynamicsTableComponent/layouts/FHComponent'
+import HYChart from './DynamicsTableComponent/layouts/HYChart'
 
 const { RNChart } = NativeModules;
 
-export default FHComponent;
+export default HYChart;

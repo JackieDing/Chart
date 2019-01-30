@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 // 正常渲染的模板组件
 import CommonComponet from "./../components/CommonComponet";
-import FNComponent from "./FNComponent";
+import HYChartExtend from "./HYChartExtend";
 import PropTypes from 'prop-types';
 import tools from '../util/tools'
 /**
@@ -17,7 +17,7 @@ import tools from '../util/tools'
  * 并且可以生成多个动态表格
  */
 
-export default class FHComponent extends Component {
+export default class HYChart extends Component {
     constructor(props){
         super(props);
         this._onLayout = this._onLayout.bind(this);
@@ -50,7 +50,7 @@ export default class FHComponent extends Component {
          *  extraData: 传递进来的一些其他的数据，例如净价等
          *  extraComponents: 用于渲染表格下面的其他组件，包括在一个FlatList里面 Array
          **/
-        let {autoHeight, dataItem, leftMenus, multiple, multipleData, navigation, loopName, extraComponents, isTitle, title,HasHead,HeadName,HeadKeys,HeadData} = this.props;
+        let {autoHeight, dataItem, leftMenus, multiple, multipleData, navigation, extraComponents, isTitle, title,HasHead,HeadName,HeadKeys,HeadData} = this.props;
         this.heightArr = new Array(leftMenus.length).fill(40)
         this.headHeightArr = new Array(HeadName.length).fill(40)
         return (<View style={{flex:1, marginBottom: autoHeight}}>
@@ -86,7 +86,8 @@ export default class FHComponent extends Component {
                             />
                         </View>
                     </View>
-                :null
+                :
+                    null
             }
             {
                 isTitle === true
@@ -115,7 +116,7 @@ export default class FHComponent extends Component {
                     {
                        leftMenus.map((item, index)=>{
                            if(item.special && item.special === true) {
-                                    let height = tools.getMaxCountHeight(dataItem,loopName,30);
+                                    let height = tools.getMaxCountHeight(dataItem,item.loopName,30);
                                     this.heightArr[index] = height;
                                     return <View key={item.leftName + index} style={[styles.headerCell,{height:height,justifyContent: 'center'}]}>
                                         <Text style={{color:'#fff'}}>{item.leftName}</Text>
@@ -146,7 +147,7 @@ export default class FHComponent extends Component {
                 multiple
                     ?
                        multipleData.map((item, index)=>{
-                           return  <FNComponent
+                           return  <HYChartExtend
                                key={item + index}
                                listKey={index+ "multiple"}
                                title={item.title}

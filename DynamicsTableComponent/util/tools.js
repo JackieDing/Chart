@@ -1210,6 +1210,20 @@ export default class tools {
         return false;
     }
 
+    static getMaxCountHeight (data,loopName,height) {
+        let MaxLen = 0;
+        data.forEach((item,index)=>{
+            if (item.hasOwnProperty(loopName)) {
+                MaxLen =MaxLen < item[loopName].length ? item[loopName].length: MaxLen;
+            }
+        })
+        if (MaxLen < 2) {
+            return 40
+        } else {
+            return height * MaxLen
+        }
+}
+
     /**
      * 切割字符串为数组，并且去除空格项目
      */

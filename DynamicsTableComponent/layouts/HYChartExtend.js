@@ -14,7 +14,7 @@ import tools from "../util/tools";
  * 具体左右渲染什么内容可以传入
  */
 
-export default class FNComponent extends Component {
+export default class HYChartExtend extends Component {
     constructor(props){
         super(props);
         this._onLayout = this._onLayout.bind(this);
