@@ -24,13 +24,13 @@ export default class AddGroup extends Component {
                 {
                     dataName.map((item, index)=>{
                         if (typeof item === "object") {
-                            if(item.keyName.indexOf("BondKey")>0) {
+                            if(renderType.hasSpre && index == renderType.spreIndex) {
                                 return `【${data[item.keyName]}】`;
                             } else {
                                 return data[item.keyName];
                             }
                         } else {
-                            if(item === "BondKey") {
+                            if(renderType.hasSpre && index == renderType.spreIndex) {
                                 return `【${data[item]}】`;
                             } else {
                                 return data[item];
